@@ -1,0 +1,17 @@
+# dependencies
+node_modules/
+
+# testing
+jtest/
+
+# production
+index.html
+web/*
+!web/favicon.ico
+
+# misc
+.DS_Store
+jsrc/
+.env
+*.log
+.idea/

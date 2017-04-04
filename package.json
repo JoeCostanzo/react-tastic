@@ -50,7 +50,7 @@
   "scripts": {
     "build": "better-npm-run build",
     "watch": "better-npm-run watch",
-    "serve": "bash ./server.sh -m http.server 3000",
+    "serve": "bash ./server.sh",
     "start": "npm-run-all --parallel watch serve",
     "test": "better-npm-run test"
   },

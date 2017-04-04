@@ -1,9 +1,6 @@
 # dependencies
 node_modules/
 
-# testing
-jtest/
-
 # production
 index.html
 web/*
@@ -11,7 +8,10 @@ web/*
 
 # misc
 .DS_Store
-jsrc/
-.env
 *.log
 .idea/
+
+# Maintainer's own custom / un-tracked files
+jtest/
+jsrc/
+.env

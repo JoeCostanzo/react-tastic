@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import Welcome from './Welcome';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Welcome />
+        <h1>Setup:</h1>
+        <p>This example App component is only placed here for demo purposes.</p>
+        <p>Please remove it's import from `index.js`, and instead replace it with the React component(s) of your choice.</p>
       </div>
     );
   }

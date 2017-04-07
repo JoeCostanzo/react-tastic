@@ -51,7 +51,7 @@ const conf = {
   cleanHtml:    './**/*.html'
 };
 
-gulp.task('html', () =>
+gulp.task('html', ['html:clean'], () =>
   gulp.src([
     conf.srcHtml,
     '!node_modules/**/*.pug',
@@ -87,9 +87,16 @@ gulp.task('scripts', () => compile());
 gulp.task('scripts:watch', ['scripts'], () => gulp.watch([`${srcDir}/**/*.js`], ['scripts']));
 
 // When running 'gulp' on the terminal this task will fire.
-gulp.task('default', ['html:clean'], () => gulp.start(['html', 'styles', 'scripts']));
+gulp.task('default', () => gulp.start(['html', 'styles', 'scripts']));
 
-gulp.task('watch', ['html:clean'], () => gulp.start(['html:watch', 'styles:watch', 'scripts:watch']));
+gulp.task('watch', () => gulp.start(['html:watch', 'styles:watch', 'scripts:watch']));
+
+// gulp.task('move', [], () => {
+//   console.log("Moving all files in test folder");
+//   gulp.src("test0/**.*")
+//     .pipe(clean({force: true}))
+//     .pipe(gulp.dest('test1'));
+// });
 
 function compile() {
   const bundler = browserify({entries: `${srcDir}/${conf.entryName}`, debug: true });

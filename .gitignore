@@ -12,6 +12,6 @@ web/*
 .idea/
 
 # Maintainer's own custom / un-tracked files
-jtest/
-jsrc/
+dev_test/
+dev_src/
 .env
